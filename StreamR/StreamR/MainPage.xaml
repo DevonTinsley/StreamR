@@ -6,11 +6,28 @@
              mc:Ignorable="d"
              x:Class="StreamR.MainPage">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="White">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="150" WidthRequest="150" Margin="0"/>
+
+        <StackLayout BackgroundColor="Black">
+            <Label Text="What's the Mood" TextColor="white" FontSize="40" HorizontalTextAlignment="Center"/>
+            <Frame Margin="20" CornerRadius="25" BackgroundColor="Orange" VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="Genre" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button ImageSource="search.png" HorizontalOptions="StartAndExpand" VerticalOptions="End" BackgroundColor="White"/>
+
+            <Button ImageSource="monitor.png" HorizontalOptions="CenterAndExpand" VerticalOptions="End" BackgroundColor="White"/>
+
+            <Button ImageSource="profile.png" HorizontalOptions="EndAndExpand" VerticalOptions="End" BackgroundColor="White"/>
+
+        </StackLayout>
+        
     </StackLayout>
 
 </ContentPage>
