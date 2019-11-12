@@ -11,7 +11,8 @@ namespace StreamR.Backend
         public List<string> Categories { get; set; }
         public string Synopsis { get; set; }
         public int LengthInMinutes { get; set; }
-
+        public string ImageURL { get; set; }
+        public List<string> StreamingPlatforms { get; set; }
 
     }
 }
