@@ -14,7 +14,15 @@
             <Label Text="What's the Mood" TextColor="white" FontSize="40" HorizontalTextAlignment="Center"/>
             <Frame Margin="20" CornerRadius="25" BackgroundColor="Orange" VerticalOptions="FillAndExpand">
                 <StackLayout>
-                    <Label Text="Genre" />
+                    <Label Text="Genre" TextColor="Black" FontSize="20" />
+                    <Picker Title="Select a Genere" x:Name="GenrePicker" />
+                    <Label Text="Type" TextColor="Black" FontSize="20" />
+                    <StackLayout Orientation="Horizontal">
+                        <Switch x:Name="TVSwitch" HorizontalOptions="Start" PropertyChanged="TVSwitch_PropertyChanged" />
+                        <Label Text="T.V." HorizontalOptions="StartAndExpand" />
+                        <Switch x:Name="MovieSwitch" HorizontalOptions="CenterAndExpand" PropertyChanged="MovieSwitch_PropertyChanged" />
+                        <Label Text="Movie" HorizontalOptions="Center" />
+                    </StackLayout>
                 </StackLayout>
             </Frame>
         </StackLayout>
