@@ -10,7 +10,7 @@ namespace StreamR
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new ProfilePage());
         }
 
         protected override void OnStart()
