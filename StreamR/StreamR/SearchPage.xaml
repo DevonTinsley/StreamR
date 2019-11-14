@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StreamR.SearchPage">
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="White">
+            <!-- Place new controls here -->
+            <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="70"  Margin="10"/>
+
+            <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
+                <Image Source="search.png" WidthRequest="100"/>
+                <Label Text="Search" TextColor="white" FontSize="40" HorizontalTextAlignment="Center" Margin="20, 0, 0, 0"/>
+                <Frame Margin="50, 20, 20, 20" CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
+                    <StackLayout>
+                        <Label Text="Genre" TextColor="Black" FontSize="20" />
+                        <Picker Title="Select a Genere" x:Name="GenrePicker" />
+                        <Label Text="Type" TextColor="Black" FontSize="20" />
+                        <StackLayout Orientation="Horizontal">
+                            <Switch x:Name="TVSwitch" HorizontalOptions="Start" />
+                            <Label Text="T.V." HorizontalOptions="StartAndExpand" />
+                            <Switch x:Name="MovieSwitch" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="Movie" HorizontalOptions="Center" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <StackLayout Margin="50" Spacing="20">
+                    <Entry x:Name="searchEntry" Placeholder="Search" />
+                    <Button Clicked="Button_OnClicked" Text="Search" />
+                </StackLayout>                 
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
+
+                <ImageButton Source="search.png"
+                    BackgroundColor="White"
+                    WidthRequest="40"
+                    VerticalOptions="Center"
+                    Clicked="Search_Clicked"/>
+
+                <ImageButton Source="monitor.png"
+                    BackgroundColor="White"
+                    WidthRequest="40"
+                    VerticalOptions="Center"
+                    Clicked="Monitor_Clicked"/>
+
+                <ImageButton Source="profile.png"
+                    BackgroundColor="White"
+                    WidthRequest="40"
+                    VerticalOptions="Center"
+                    Clicked="Profile_Clicked"/>
+
+            </StackLayout>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

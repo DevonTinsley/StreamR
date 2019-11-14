@@ -13,7 +13,7 @@ This is a simple app that will use your search criteria to find stuff for you to
 * Download the app
 * Choose streaming services
 * Set up a profile (not required)
-* find media  
+* Find media  
 
 ## 🔑 Key Features <a name="KeyFeatures"></a>
 * Search based on name
