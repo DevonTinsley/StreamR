@@ -1,5 +1,6 @@
 using StreamR.Backend;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace StreamR.Tests
@@ -11,17 +12,17 @@ namespace StreamR.Tests
         {
             //arrange
             MovieGenerator generator = new MovieGenerator();
-            var category = "Drama";
-           
+            List<string> category = new List<string>();
+            category.Add("Drama");
+
+            List<string> platforms = new List<string>();
+            platforms.Add("Netflix");
+
             //act
-            var results = generator.GenerateMovies(category);
+            var results = generator.GenerateMovies(category,platforms);
 
 
-            //asert 
-
-            Assert.Single(results);
-
-            Assert.Equal("The Shawshank Redemption", results[0].Title);
+            Assert.Equal(3, results.Count);
 
         }
     }

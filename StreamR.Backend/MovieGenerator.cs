@@ -7,9 +7,9 @@ namespace StreamR.Backend
     public class MovieGenerator
     {
         //rename method for clarity
-        public List<Movie> GenerateMovies(string category) {
+        public List<Movie> GenerateMovies(List<string> category , List<string> platforms ) {
             var moveRepository = new MovieRepository();
-            var results = moveRepository.GetMoviesByCategory(category);
+            var results = moveRepository.GetMoviesByCategory(category, platforms);
 
             return results;
 

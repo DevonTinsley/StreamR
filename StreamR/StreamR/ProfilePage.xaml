@@ -6,14 +6,23 @@
         <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="70"  Margin="10"/>
 
         <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
-            <Label Text="Let's Get Started?" TextColor="white" FontSize="40" HorizontalTextAlignment="Center" Margin="20, 0, 0, 0"/>
-            <Label Text="Choose your streaming service" TextColor="white" FontSize="20" HorizontalTextAlignment="Center" Margin="20, 0, 0, 0"/>
-            <Frame Margin="50, 20, 20, 20 " CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
+            <Label Text="Let's Get Started?" TextColor="white" FontSize="40" HorizontalTextAlignment="Center" Margin="0, 20, 0 ,0"/>
+            <Label Text="Choose your streaming service" TextColor="white" FontSize="20" HorizontalTextAlignment="Center" />
+            <Frame Margin="20, 20, 20, 20 " CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
                 <StackLayout>
-                    <Label Text="Type" TextColor="Black" FontSize="20" />
-                    <StackLayout Orientation="Horizontal">
-                       
-                        <Label Text="Movie" HorizontalOptions="Center" />
+                    <StackLayout Orientation="Vertical" Spacing="5">
+                        <Label Text="Netflix" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Black" />
+                        <Switch x:Name="NetflixSwitch" HorizontalOptions="Center" OnColor="Green" />
+
+                        <Label Text="Hulu" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" />
+                        <Switch x:Name="HuluSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green"/>
+                        
+                        <Label Text="Amazon Prime" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"  FontSize="20" TextColor="Black"/>
+                        <Switch x:Name="AmazonPrimeSwitch" HorizontalOptions="Center" OnColor="Green"  />
+                        
+                        <Label Text="HBO" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black"/>
+                        <Switch x:Name="HBOSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green"/>
+        
                     </StackLayout>
                 </StackLayout>
             </Frame>
@@ -40,6 +49,8 @@
                     Clicked="Profile_Clicked"/>
 
             </StackLayout>
+
+            
 
         </StackLayout>
     </ContentPage.Content>

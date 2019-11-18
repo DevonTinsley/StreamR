@@ -45,7 +45,7 @@ namespace StreamR.Backend
             var VForVendetta = new Movie()
             {
                 Title = "V For Vendetta",
-                Id = 2,
+                Id = 3,
                 Categories = new List<string>() {
                     "Drama",
                     "Action"
@@ -62,9 +62,9 @@ namespace StreamR.Backend
             var KilledHitlerAndBigfoot = new Movie()
             {
                 Title = "The Man Who Killed Hitler And Then Bigfoot",
-                Id = 2,
+                Id = 4,
                 Categories = new List<string>() {
-                    "Adventure",
+                    "Drama",
                     "Action"
                 },
                 Synopsis = "It's in the name, he killed hitler AND bigfoot.",
@@ -79,7 +79,7 @@ namespace StreamR.Backend
             var Juno = new Movie()
             {
                 Title = "Juno",
-                Id = 2,
+                Id = 5,
                 Categories = new List<string>() {
                     "Comedy",
                     "Drama"
@@ -103,12 +103,16 @@ namespace StreamR.Backend
 
 
         }
-        public List<Movie> GetMoviesByCategory(string category) {
+        public List<Movie> GetMoviesByCategory(List<string> categories, List<string> platforms) {
+            var results = movieRepo.Where(x => x.Categories.Any(y => categories.Contains(y))).ToList();
+            return GetMoviesByPlatform(platforms);
 
-
-            return movieRepo.Where(x => x.Categories.Any( y => y == category) ).ToList();
         }
+        public List<Movie> GetMoviesByPlatform(List<string> platforms) {
+            var results = movieRepo.Where(x => x.Categories.Any(y => platforms.Contains(y))).ToList();
+            return results;
 
+        }
 
         public Movie GetMovie(int id) {
             return movieRepo.Where(x => x.Id == id).FirstOrDefault();
