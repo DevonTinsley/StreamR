@@ -12,24 +12,24 @@
             <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="70"  Margin="10"/>
 
             <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
-                <Image Source="search.png" WidthRequest="100"/>
-                <Label Text="Search" TextColor="white" FontSize="40" HorizontalTextAlignment="Center" Margin="20, 0, 0, 0"/>
-                <Frame Margin="50, 20, 20, 20" CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
+                <Label Text="Search" TextColor="white" FontSize="40" HorizontalTextAlignment="Center"/>
+                <Frame Margin="20, 20, 20, 20" CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
                     <StackLayout>
                         <Label Text="Genre" TextColor="Black" FontSize="20" />
                         <Picker Title="Select a Genere" x:Name="GenrePicker" />
                         <Label Text="Type" TextColor="Black" FontSize="20" />
                         <StackLayout Orientation="Horizontal">
-                            <Switch x:Name="TVSwitch" HorizontalOptions="Start" />
-                            <Label Text="T.V." HorizontalOptions="StartAndExpand" />
-                            <Switch x:Name="MovieSwitch" HorizontalOptions="CenterAndExpand"/>
-                            <Label Text="Movie" HorizontalOptions="Center" />
+                            <Switch x:Name="TVSwitch" HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Text="T.V." HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black" />
+                            <StackLayout Orientation="Horizontal" Margin="10"/>
+                            <Switch x:Name="MovieSwitch" HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Text="Movie" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black" />
                         </StackLayout>
+                        <Entry x:Name="searchEntry" Placeholder="Search" />
+                        <Button Clicked="Search_Button" FontSize="20" Text="Search" TextColor="Black" BackgroundColor="White" WidthRequest="150" HeightRequest="50" HorizontalOptions="Center"/>
                     </StackLayout>
                 </Frame>
-                <StackLayout Margin="50" Spacing="20">
-                    <Entry x:Name="searchEntry" Placeholder="Search" />
-                </StackLayout>
+
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
