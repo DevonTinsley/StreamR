@@ -97,22 +97,35 @@ namespace StreamR.Backend
 
         }
         //read
-        public List<Movie> GetMovies() {
-            //returns all movies
-            return movieRepo;
+        public List<Movie> GenerateMovies(List<string> categories, List<string> platforms) {
+            var moviesByCategory = movieRepo.Where(x => x.Categories.Any(y => categories.Contains(y))).ToList();
+            var filteredMovies = moviesByCategory.Where(x => x.Categories.Any(y => platforms.Contains(y))).ToArray();
+            var results = new List<Movie>();
+            var addedMovies = new List<int>();
+            for (int i = 0 ; i < 6 ; i++) {
 
+                var rand = new Random();
+                var index = rand.Next(filteredMovies.Length);
+                if (!addedMovies.Contains(index))
+                {
+                    results.Add(results[index]);
+                    addedMovies.Add(index);
 
-        }
-        public List<Movie> GetMoviesByCategory(List<string> categories, List<string> platforms) {
-            var results = movieRepo.Where(x => x.Categories.Any(y => categories.Contains(y))).ToList();
-            return GetMoviesByPlatform(platforms);
+                }
+                else i--;
+                
+            
+            }
 
-        }
-        public List<Movie> GetMoviesByPlatform(List<string> platforms) {
-            var results = movieRepo.Where(x => x.Categories.Any(y => platforms.Contains(y))).ToList();
             return results;
 
         }
+        //public List<Movie> GetMoviesByPlatform(List<string> platforms , List<Movie> movies) {
+
+       
+        //    return results;
+
+        //}
 
         public Movie GetMovie(int id) {
             return movieRepo.Where(x => x.Id == id).FirstOrDefault();
