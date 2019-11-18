@@ -28,7 +28,7 @@ namespace StreamR
             Navigation.PushAsync(new MainPage());
         }
 
-        private void Profile_Clicked_1(object sender, EventArgs e)
+        private void Profile_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ProfilePage());
         }

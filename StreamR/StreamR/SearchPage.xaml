@@ -29,10 +29,9 @@
                 </Frame>
                 <StackLayout Margin="50" Spacing="20">
                     <Entry x:Name="searchEntry" Placeholder="Search" />
-                    <Button Clicked="Button_OnClicked" Text="Search" />
-                </StackLayout>                 
+                </StackLayout>
             </StackLayout>
-            
+
             <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
 
                 <ImageButton Source="search.png"
@@ -54,8 +53,6 @@
                     Clicked="Profile_Clicked"/>
 
             </StackLayout>
-            
         </StackLayout>
-        
     </ContentPage.Content>
 </ContentPage>
