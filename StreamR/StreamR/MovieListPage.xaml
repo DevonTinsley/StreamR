@@ -31,6 +31,38 @@
                     VerticalOptions="Center"
                     Clicked="Profile_Clicked"/>
 
+
+                <ListView
+                    x:Name="movieList"
+                    HasUnevenRows="True"
+                   >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame>
+                                    <StackLayout>
+                                        <Image
+                                            
+                                            HeightRequest="150"
+                                            HorizontalOptions="CenterAndExpand"
+                                               Source="{Binding Image}"                                            
+                                            />
+
+                                        <Label
+                                            FontSize="Small"
+                                            HorizontalOptions="Center"
+                                            HorizontalTextAlignment="Center"
+                                            Text="{Binding Title}"/>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    
+                    
+                    
+                </ListView>
+                
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

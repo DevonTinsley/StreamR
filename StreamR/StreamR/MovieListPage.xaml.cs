@@ -1,17 +1,44 @@
-﻿using System;
+﻿using StreamR.Backend;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace StreamR
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MovieListPage : ContentPage
     {
+        private ObservableCollection<Movie> MoviesOnPage { get; set; }
+
+        public MovieListPage(List<string> category, List<string> platforms)
+        {
+
+            var generator = new MovieGenerator();
+            var movies = generator.GenerateMovies(category,platforms);
+
+            var MoviesOnPage = new ObservableCollection<Movie>();
+
+
+            foreach (Movie movie in movies)
+            {
+                MoviesOnPage.Add(movie);
+            }
+
+            movieList.ItemsSource = MoviesOnPage;
+
+        }
         public MovieListPage()
         {
             InitializeComponent();
