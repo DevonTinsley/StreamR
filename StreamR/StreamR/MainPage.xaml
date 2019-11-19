@@ -11,8 +11,8 @@
         <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="70"  Margin="10"/>
 
         <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
-            <Label Text="What's the Mood?" TextColor="white" FontSize="40" HorizontalTextAlignment="Center" Margin="20, 0, 0, 0"/>
-            <Frame Margin="50, 20, 20, 20" CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
+            <Label Text="What's the Mood?" TextColor="white" FontSize="40" HorizontalTextAlignment="Center" Margin="0,20, 0, 0"/>
+            <Frame Margin="20, 20, 20, 20" CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
                 <StackLayout>
                     <Label Text="Genre" TextColor="Black" FontSize="20" />
                     <Picker Title="Select a Genere" x:Name="GenrePicker" />

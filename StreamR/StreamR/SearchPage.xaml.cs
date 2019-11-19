@@ -32,5 +32,10 @@ namespace StreamR
         {
             Navigation.PushAsync(new ProfilePage());
         }
+
+        private void Search_Button(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MovieListPage());
+        }
     }
 }
