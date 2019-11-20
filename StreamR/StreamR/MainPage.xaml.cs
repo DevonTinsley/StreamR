@@ -63,7 +63,7 @@ namespace StreamR
 
         private void Search_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new SearchPage());
+            Navigation.PushAsync(new MovieListPage());
         }
 
         private void Monitor_Clicked(object sender, EventArgs e)
