@@ -15,7 +15,7 @@
                         <Switch x:Name="NetflixSwitch" HorizontalOptions="Center" OnColor="Green" />
 
                         <Label Text="Hulu" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" />
-                        <Switch x:Name="HuluSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green"/>
+                        <Switch x:Name="HuluSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="HuluSwitch_Toggled"/>
                         
                         <Label Text="Amazon Prime" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"  FontSize="20" TextColor="Black"/>
                         <Switch x:Name="AmazonPrimeSwitch" HorizontalOptions="Center" OnColor="Green"  />
