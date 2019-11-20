@@ -5798,13 +5798,25 @@ namespace StreamR.Droid
 			public const int profile = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int search = 2131165303;
+			public const int profileyellow = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int tooltip_frame_dark = 2131165304;
+			public const int search = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int tooltip_frame_light = 2131165305;
+			public const int searchyellow = 2131165305;
+			
+			// aapt resource value: 0x7F07007A
+			public const int televisiony = 2131165306;
+			
+			// aapt resource value: 0x7F07007B
+			public const int tooltip_frame_dark = 2131165307;
+			
+			// aapt resource value: 0x7F07007C
+			public const int tooltip_frame_light = 2131165308;
+			
+			// aapt resource value: 0x7F07007D
+			public const int tvyellow = 2131165309;
 			
 			static Drawable()
 			{
