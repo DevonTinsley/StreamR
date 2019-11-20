@@ -9,32 +9,29 @@
 
         <StackLayout BackgroundColor="White">
             <!-- Place new controls here -->
-            <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="70"  Margin="10"/>
-
-            <StackLayout BackgroundColor="White" VerticalOptions="CenterAndExpand">
-                <Image Source="search.png" HeightRequest="100"/>
-                <Label Text="Search" TextColor="Black" FontSize="40" HorizontalTextAlignment="Center"/>
-                <StackLayout>
-                        <Entry x:Name="searchEntry" Placeholder="Search"  BackgroundColor="Black" TextColor="White" WidthRequest="200" HorizontalOptions="Center"/>
-                        <Button Clicked="Search_Button" FontSize="20" Text="Search" TextColor="White" BackgroundColor="Black" WidthRequest="150" HeightRequest="50" HorizontalOptions="Center"/>
-                </StackLayout>
+            <Image Source="logo.png"  HorizontalOptions="Center" VerticalOptions="Start" HeightRequest="70"/>
+            <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
+                <Image Source="searchyellow.png" HeightRequest="75"/>
+                <Label Text="Search" TextColor="White" FontSize="40" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="searchEntry" Placeholder="Search"  BackgroundColor="White" TextColor="Black" WidthRequest="325" HorizontalOptions="Center"/>
+                <Button Clicked="Search_Button" FontSize="20" Text="Search" TextColor="Black" BackgroundColor="White" WidthRequest="150" HeightRequest="50" HorizontalOptions="Center"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
 
-                <ImageButton Source="search.png"
+                <ImageButton Source="searchyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
                     Clicked="Search_Clicked"/>
 
-                <ImageButton Source="monitor.png"
+                <ImageButton Source="tvyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
                     Clicked="Monitor_Clicked"/>
 
-                <ImageButton Source="profile.png"
+                <ImageButton Source="profileyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
