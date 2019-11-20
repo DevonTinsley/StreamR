@@ -18,11 +18,13 @@
                     <Picker Title="Select a Genere" x:Name="GenrePicker" />
                     <Label Text="Type" TextColor="Black" FontSize="20" />
                     <StackLayout Orientation="Horizontal">
-                        <Switch x:Name="TVSwitch" HorizontalOptions="Start" PropertyChanged="TVSwitch_PropertyChanged" />
-                        <Label Text="T.V." HorizontalOptions="StartAndExpand" />
-                        <Switch x:Name="MovieSwitch" HorizontalOptions="CenterAndExpand" PropertyChanged="MovieSwitch_PropertyChanged" />
-                        <Label Text="Movie" HorizontalOptions="Center" />
+                        <Switch x:Name="TVSwitch" HorizontalOptions="Start" PropertyChanged="TVSwitch_PropertyChanged" OnColor="Green" />
+                        <Label Text="T.V." HorizontalOptions="StartAndExpand" FontSize="20"/>
+                        <Switch x:Name="MovieSwitch" HorizontalOptions="CenterAndExpand" PropertyChanged="MovieSwitch_PropertyChanged" OnColor="Green"/>
+                        <Label Text="Movie" FontSize="20" />
+
                     </StackLayout>
+                    <Button Clicked="Search_Button" FontSize="20" Text="Search" TextColor="Black" BackgroundColor="#E8E9EB" WidthRequest="150" HeightRequest="50" HorizontalOptions="Center" Margin="30" CornerRadius="25"/>
                 </StackLayout>
             </Frame>
         </StackLayout>
