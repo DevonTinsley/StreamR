@@ -8,41 +8,50 @@
         <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
             <Label Text="Let's Get Started?" TextColor="white" FontSize="40" HorizontalTextAlignment="Center" Margin="0, 20, 0 ,0"/>
             <Label Text="Choose your streaming service" TextColor="white" FontSize="20" HorizontalTextAlignment="Center" />
-            <Frame Margin="20, 20, 20, 20 " CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
-                <StackLayout>
-                    <StackLayout Orientation="Vertical" Spacing="5">
-                        <Label Text="Netflix" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="Black" />
-                        <Switch x:Name="NetflixSwitch" HorizontalOptions="Center" OnColor="Green" />
+                <Frame Margin="20, 20, 20, 20 " CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
+                    <Grid>
+                        <Label Text="Netflix" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                        <Switch x:Name="NetflixSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="NetflixSwitch_Toggled" Grid.Row="1" Grid.Column="0"/>
 
-                        <Label Text="Hulu" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" />
-                        <Switch x:Name="HuluSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="HuluSwitch_Toggled"/>
-                        
-                        <Label Text="Amazon Prime" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"  FontSize="20" TextColor="Black"/>
-                        <Switch x:Name="AmazonPrimeSwitch" HorizontalOptions="Center" OnColor="Green"  />
-                        
-                        <Label Text="HBO" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black"/>
-                        <Switch x:Name="HBOSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green"/>
-        
-                    </StackLayout>
-                </StackLayout>
-            </Frame>
+                        <Label Text="Hulu" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
+                        <Switch x:Name="HuluSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="HuluSwitch_Toggled" Grid.Row="1" Grid.Column="1"/>
+
+                        <Label Text="Amazon Prime" HorizontalOptions="Center" FontAttributes="Bold"  FontSize="20" TextColor="Black" Grid.Row="2" Grid.Column="0"/>
+                        <Switch x:Name="AmazonPrimeSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="AmazonPrimeSwitch_Toggled" Grid.Row="3" Grid.Column="0"/>
+
+                        <Label Text="HBO" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
+                        <Switch x:Name="HBOSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="HBOSwitch_Toggled" Grid.Row="3" Grid.Column="1"/>
+
+                        <Label Text="Showtime" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" Grid.Row="4" Grid.Column="0"/>
+                        <Switch x:Name="ShowtimeSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="ShowtimeSwitch_Toggled" Grid.Row="5" Grid.Column="0"/>
+
+                        <Label Text="Stars" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" Grid.Row="4" Grid.Column="1"/>
+                        <Switch x:Name="StarsSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="StarsSwitch_Toggled" Grid.Row="5" Grid.Column="1"/>
+
+                        <Label Text="Sling" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" Grid.Row="6" Grid.Column="0"/>
+                        <Switch x:Name="SlingSwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="SlingSwitch_Toggled" Grid.Row="7" Grid.Column="0"/>
+
+                        <Label Text="Disney +" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20" TextColor="Black" Grid.Row="6" Grid.Column="1"/>
+                        <Switch x:Name="DisneySwitch" HorizontalOptions="CenterAndExpand" OnColor="Green" Toggled="DisneySwitch_Toggled" Grid.Row="7" Grid.Column="1"/>
+                    </Grid>
+                </Frame>
         </StackLayout>
 
             <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
 
-                <ImageButton Source="search.png"
+                <ImageButton Source="searchyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
                     Clicked="Search_Clicked"/>
 
-                <ImageButton Source="monitor.png"
+                <ImageButton Source="tvyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
                     Clicked="Monitor_Clicked"/>
 
-                <ImageButton Source="profile.png"
+                <ImageButton Source="profileyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"

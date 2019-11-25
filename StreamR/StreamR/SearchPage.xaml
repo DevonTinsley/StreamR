@@ -11,10 +11,14 @@
             <!-- Place new controls here -->
             <Image Source="logo.png"  HorizontalOptions="Center" VerticalOptions="Start" HeightRequest="70"/>
             <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
-                <Image Source="searchyellow.png" HeightRequest="75"/>
-                <Label Text="Search" TextColor="White" FontSize="40" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="searchEntry" Placeholder="Search"  BackgroundColor="White" TextColor="Black" WidthRequest="325" HorizontalOptions="Center"/>
-                <Button Clicked="Search_Button" FontSize="20" Text="Search" TextColor="Black" BackgroundColor="White" WidthRequest="150" HeightRequest="50" HorizontalOptions="Center"/>
+                <StackLayout VerticalOptions="CenterAndExpand" Spacing="35">
+                    <Image Source="searchyellow.png" HeightRequest="75"/>
+                    <Label Text="Search" TextColor="White" FontSize="40" HorizontalTextAlignment="Center"/>
+                    <Frame BackgroundColor="White" HeightRequest="40" WidthRequest="330" CornerRadius="25" HorizontalOptions="Center">
+                        <Entry x:Name="searchEntry" Placeholder="Search"  BackgroundColor="White" TextColor="Black" WidthRequest="325" HeightRequest="35" HorizontalOptions="Center"/>
+                    </Frame>
+                    <Button Clicked="Search_Button" FontSize="20" Text="Search" TextColor="Black" BackgroundColor="White" WidthRequest="150" HeightRequest="50" HorizontalOptions="Center" CornerRadius="25"/>
+                </StackLayout>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
@@ -26,6 +30,7 @@
                     Clicked="Search_Clicked"/>
 
                 <ImageButton Source="tvyellow.png"
+
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
@@ -36,7 +41,6 @@
                     WidthRequest="40"
                     VerticalOptions="Center"
                     Clicked="Profile_Clicked"/>
-
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

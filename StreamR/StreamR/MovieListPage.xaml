@@ -10,19 +10,19 @@
 
             <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
 
-                <ImageButton Source="search.png"
+                <ImageButton Source="searchyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
                     Clicked="Search_Clicked"/>
 
-                <ImageButton Source="monitor.png"
+                <ImageButton Source="tvyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
                     Clicked="Monitor_Clicked"/>
 
-                <ImageButton Source="profile.png"
+                <ImageButton Source="profileyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
