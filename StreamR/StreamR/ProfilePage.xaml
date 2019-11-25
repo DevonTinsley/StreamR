@@ -3,7 +3,7 @@
     <ContentPage.Content>
          <StackLayout BackgroundColor="White">
         <!-- Place new controls here -->
-        <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="70"  Margin="10"/>
+        <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="70"/>
 
         <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
             <Label Text="Let's Get Started?" TextColor="white" FontSize="40" HorizontalTextAlignment="Center" Margin="0, 20, 0 ,0"/>
