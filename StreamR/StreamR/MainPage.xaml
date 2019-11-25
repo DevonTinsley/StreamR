@@ -13,7 +13,7 @@
         <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
             <Label Text="What's the Mood?" TextColor="white" FontSize="40" HorizontalTextAlignment="Center" Margin="0,20, 0, 0"/>
             <Frame Margin="20, 20, 20, 20" CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
-                <StackLayout Spacing="15">
+                <StackLayout>
                     <Label Text="Genre" TextColor="Black" FontSize="25" />
                     <Picker Title="Select a Genere" x:Name="GenrePicker" />
                     <Label Text="Type" TextColor="Black" FontSize="25" Margin="0,0,0,10"/>
