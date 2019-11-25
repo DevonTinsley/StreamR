@@ -17,9 +17,8 @@ namespace StreamR
         {
             InitializeComponent();
 
-            GenrePicker.ItemsSource = new List<string> { "Action", "Adventure", "Comedy" };
-
-
+            GenrePicker.ItemsSource = new List<string> { "Action", "Adventure", "Comedy" , "Drama" };
+            
         }
 
         private void Search_Clicked(object sender, EventArgs e)
@@ -39,7 +38,9 @@ namespace StreamR
 
         private void Search_For_Movie(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MovieListPage());
+            var genre = new List<string> { GenrePicker.SelectedItem.ToString() };
+            var plat = new List<string> { "Netflix" };
+            Navigation.PushAsync(new MovieListPage(genre,plat));
         }
     }
 }

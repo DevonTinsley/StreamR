@@ -98,17 +98,17 @@ namespace StreamR.Backend
         }
         //read
         public List<Movie> GenerateMovies(List<string> categories, List<string> platforms) {
-            var moviesByCategory = movieRepo.Where(x => x.Categories.Any(y => categories.Contains(y))).ToList();
-            var filteredMovies = moviesByCategory.Where(x => x.Categories.Any(y => platforms.Contains(y))).ToArray();
+            var moviesByCategory = movieRepo.Where(x => x.Categories.Any(y => categories.Contains(y)));
+            var filteredMovies = moviesByCategory.Where(x => x.StreamingPlatforms.Any( y=> platforms.Contains(y))).ToArray();
             var results = new List<Movie>();
             var addedMovies = new List<int>();
-            for (int i = 0 ; i < 6 ; i++) {
+            for (int i = 0 ; i < 2 ; i++) {
 
                 var rand = new Random();
                 var index = rand.Next(filteredMovies.Length);
                 if (!addedMovies.Contains(index))
                 {
-                    results.Add(results[index]);
+                    results.Add(filteredMovies[index]);
                     addedMovies.Add(index);
 
                 }

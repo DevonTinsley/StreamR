@@ -24,7 +24,7 @@ namespace StreamR
 
         public MovieListPage(List<string> category, List<string> platforms)
         {
-
+            InitializeComponent();
             var generator = new MovieGenerator();
             var movies = generator.GenerateMovies(category,platforms);
 
@@ -36,7 +36,7 @@ namespace StreamR
                 MoviesOnPage.Add(movie);
             }
 
-            movieList.ItemsSource = MoviesOnPage;
+            movieList.ItemsSource =  MoviesOnPage;
 
         }
         public MovieListPage()

@@ -24,7 +24,7 @@
                         <Label Text="Movie" FontSize="25" TextColor="black" Margin="0,0,20,0"/>
 
                     </StackLayout>
-                    <Button Clicked="Search_For_Movie" FontSize="25" Text="Search" TextColor="Black" BackgroundColor="#E8E9EB" WidthRequest="150" HeightRequest="50" HorizontalOptions="Center" Margin="20" CornerRadius="25"/>
+                    <Button Clicked="Search_For_Movie"   FontSize="25" Text="Search" TextColor="Black" BackgroundColor="#E8E9EB" WidthRequest="150" HeightRequest="50" HorizontalOptions="Center" Margin="20" CornerRadius="25"/>
                 </StackLayout>
             </Frame>
         </StackLayout>
