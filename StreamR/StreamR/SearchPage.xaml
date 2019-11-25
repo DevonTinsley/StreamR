@@ -11,7 +11,7 @@
             <!-- Place new controls here -->
             <Image Source="logo.png"  HorizontalOptions="Center" VerticalOptions="Start" HeightRequest="70"/>
             <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
-                <StackLayout VerticalOptions="CenterAndExpand" Spacing="35">
+                <StackLayout VerticalOptions="CenterAndExpand" Spacing="30">
                     <Image Source="searchyellow.png" HeightRequest="75"/>
                     <Label Text="Search" TextColor="White" FontSize="40" HorizontalTextAlignment="Center"/>
                     <Frame BackgroundColor="White" HeightRequest="40" WidthRequest="330" CornerRadius="25" HorizontalOptions="Center">
