@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace StreamR
 {
     public partial class ProfilePage : ContentPage
     {
-        List<string> platforms;
+        public List<string> platforms;
         public ProfilePage()
         {
             platforms = new List<string>();
-
             InitializeComponent();
         }
       
@@ -22,7 +21,7 @@ namespace StreamR
 
         private void Monitor_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushAsync(new MainPage(platforms));
         }
 
         private void Profile_Clicked(object sender, EventArgs e)
