@@ -17,11 +17,12 @@
                                 <ViewCell>
                                     <Frame>
                                         <StackLayout>
-                                            <Image
+                                            <ImageButton
+                                                Clicked="ImageButton_Clicked"
                                                 HeightRequest="150"
                                                 HorizontalOptions="CenterAndExpand"
-                                                Source="{Binding Image}"/>
-                                            <Label
+                                                Source="{Binding ImageURL}"/>
+                                            <Label                                                
                                                 FontSize="Small"
                                                 HorizontalOptions="Center"
                                                 HorizontalTextAlignment="Center"

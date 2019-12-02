@@ -43,7 +43,10 @@ namespace StreamR
         {
             InitializeComponent();
         }
-
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MovieDetailsPage());
+        }
         private void Search_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new SearchPage());
@@ -58,5 +61,7 @@ namespace StreamR
         {
             Navigation.PushAsync(new ProfilePage());
         }
+
+        
     }
 }
