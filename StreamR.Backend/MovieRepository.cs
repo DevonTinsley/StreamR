@@ -33,7 +33,7 @@ namespace StreamR.Backend
                 Categories = new List<string>() {
                     "Drama"
                 },
-                 Synopsis = "I'll def add these later probably",
+                Synopsis = "I'll def add these later probably",
                 StreamingPlatforms = new List<string>() {
                     "HBO",
                     "Amazon Prime"

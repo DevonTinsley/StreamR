@@ -6,31 +6,34 @@
              mc:Ignorable="d"
              x:Class="StreamR.MovieListPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="White">
             <StackLayout>
-                <ListView
-                    x:Name="movieList"
-                    HasUnevenRows="True">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Frame>
-                                    <StackLayout>
-                                        <Image
-                                            HeightRequest="150"
-                                            HorizontalOptions="CenterAndExpand"
-                                               Source="{Binding Image}"/>
-                                        <Label
-                                            FontSize="Small"
-                                            HorizontalOptions="Center"
-                                            HorizontalTextAlignment="Center"
-                                            Text="{Binding Title}"/>
-                                    </StackLayout>
-                                </Frame>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <ScrollView>
+                    <ListView
+                        x:Name="movieList"
+                        HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame>
+                                        <StackLayout>
+                                            <Image
+                                                HeightRequest="150"
+                                                HorizontalOptions="CenterAndExpand"
+                                                Source="{Binding Image}"/>
+                                            <Label
+                                                FontSize="Small"
+                                                HorizontalOptions="Center"
+                                                HorizontalTextAlignment="Center"
+                                                Text="{Binding Title}"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+                
             </StackLayout>
                        
             <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
