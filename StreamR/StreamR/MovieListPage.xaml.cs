@@ -46,6 +46,7 @@ namespace StreamR
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MovieDetailsPage());
+
         }
         private void Search_Clicked(object sender, EventArgs e)
         {
