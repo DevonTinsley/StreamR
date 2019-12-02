@@ -13,6 +13,7 @@ namespace StreamR
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        List<string> plat;
         public MainPage()
         {
             InitializeComponent();
@@ -20,7 +21,13 @@ namespace StreamR
             GenrePicker.ItemsSource = new List<string> { "Action", "Adventure", "Comedy" , "Drama" };
             
         }
+        public MainPage(List<string> platforms)
+        {
+            InitializeComponent();
+            plat = platforms;
+            GenrePicker.ItemsSource = new List<string> { "Action", "Adventure", "Comedy", "Drama" };
 
+        }
         private void Search_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new SearchPage());
@@ -39,8 +46,8 @@ namespace StreamR
         private void Search_For_Movie(object sender, EventArgs e)
         {
             var genre = new List<string> { GenrePicker.SelectedItem.ToString() };
-            var plat = new List<string> { "Netflix" };
-            Navigation.PushAsync(new MovieListPage(genre,plat));
+           
+            Navigation.PushAsync(new MovieListPage(genre, plat));
         }
     }
 }

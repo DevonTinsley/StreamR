@@ -22,7 +22,8 @@ namespace StreamR.Backend
                     "Netflix",
                     "Amazon Prime"
                 },
-                ImageURL = "https://images-na.ssl-images-amazon.com/images/I/519NBNHX5BL._SY445_.jpg",
+              
+                ImageURL = "https://images-na.ssl-images-amazon.com/images/I/519NBNHX5BL.SY445.jpg",
                 LengthInMinutes = 142
             };
             movieRepo.Add(ShawShank);
