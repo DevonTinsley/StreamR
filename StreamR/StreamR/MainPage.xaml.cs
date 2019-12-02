@@ -14,12 +14,13 @@ namespace StreamR
     public partial class MainPage : ContentPage
     {
         List<string> plat;
+        List<string> genre;
         public MainPage()
         {
             InitializeComponent();
 
-            GenrePicker.ItemsSource = new List<string> { "Action", "Adventure", "Comedy" , "Drama" };
-            
+            GenrePicker.ItemsSource = new List<string> { "Action", "Adventure", "Comedy", "Drama" };
+
         }
         public MainPage(List<string> platforms)
         {
@@ -45,9 +46,17 @@ namespace StreamR
 
         private void Search_For_Movie(object sender, EventArgs e)
         {
-            var genre = new List<string> { GenrePicker.SelectedItem.ToString() };
-           
-            Navigation.PushAsync(new MovieListPage(genre, plat));
+            if(GenrePicker.SelectedItem.ToString() != null)
+            {
+                genre = new List<string> { GenrePicker.SelectedItem.ToString() };
+            }
+
+            if (genre.ToString() != string.Empty && plat.ToString() != string.Empty){
+                Navigation.PushAsync(new MovieListPage(genre, plat));
+
+            }
+          
+
         }
     }
 }
