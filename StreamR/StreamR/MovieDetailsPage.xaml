@@ -6,10 +6,23 @@
              mc:Ignorable="d"
              x:Class="StreamR.MovieDetailsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="White">
+            <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="70"/>
+            <ScrollView>
+                <StackLayout BackgroundColor="Black" VerticalOptions="FillAndExpand">
+                    <Label Text="The Shawshank Redemption" FontSize="35" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                    <Image Source="https://images-na.ssl-images-amazon.com/images/I/519NBNHX5BL.SY445.jpg" HeightRequest="300" Margin="25"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="142 Minutes" FontSize="15" TextColor="White" Margin="50,0,50,0" HorizontalOptions="Center"/>
+                        <Label Text="Rating R" FontSize="15" TextColor="White" Margin="50,0,50,0" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <Label Text="Platforms: Netflix" FontSize="15" TextColor="White" Margin="50,0,0,0"/>
+                    <Label Text="Description" FontSize="15" TextColor="White" Margin="50,0,0,0"/>
+                    <Label Text="The greatest movie of all time ever if you disagree uninstall my app." FontSize="15" TextColor="White" Margin="50,0,50,0"/>
+                </StackLayout>
+            </ScrollView>
+
+
 
             <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
 
