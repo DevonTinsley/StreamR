@@ -10,31 +10,34 @@
             <Image Source="logo.png"  HorizontalOptions="Center" HeightRequest="70"/>
             <StackLayout BackgroundColor="Black">
                 <ScrollView>
-                    <ListView
+                    <StackLayout>
+                        <Label Text="Results" TextColor="White" FontSize="40" HorizontalTextAlignment="Center" Margin="0,30,0,0"/>
+                        <ListView
                         x:Name="movieList"
                         HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <ViewCell>
-                                    <Frame Margin="20, 20, 20, 20" CornerRadius="25" BackgroundColor="Orange" VerticalOptions="Fill">
-                                        <StackLayout>
+                                    <ViewCell>
+                                        <StackLayout Margin="30">
                                             <ImageButton
                                                 Clicked="ImageButton_Clicked"
                                                 HeightRequest="150"
                                                 HorizontalOptions="CenterAndExpand"
                                                 Source="{Binding ImageURL}"/>
                                             <Label                                                
-                                                FontSize="25"
+                                                FontSize="20"
                                                 FontAttributes="Bold"
                                                 HorizontalOptions="Center"
                                                 HorizontalTextAlignment="Center"
+                                                TextColor="White"
                                                 Text="{Binding Title}"/>
                                         </StackLayout>
-                                    </Frame>
-                                </ViewCell>
+                                    </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
-                    </ListView>
+                    </ListView> 
+                    </StackLayout>
+                    
                 </ScrollView>
                 
             </StackLayout>

@@ -31,7 +31,7 @@ namespace StreamR
             var MoviesOnPage = new ObservableCollection<Movie>();
 
 
-            foreach (Movie movie in movies)
+            foreach (Movie movie in movies.OrderBy(x=>x.Title))
             {
                 MoviesOnPage.Add(movie);
             }
