@@ -13,6 +13,7 @@ namespace StreamR.Backend
         public int LengthInMinutes { get; set; }
         public string ImageURL { get; set; }
         public List<string> StreamingPlatforms { get; set; }
+        public string Rating { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace StreamR
             this.platforms.Text = "Platforms: " + platformscsv;
             this.description.Text = selectedItem.Synopsis;
             this.runtime.Text = "Runtime: " + selectedItem.LengthInMinutes.ToString();
-
+            this.rating.Text = selectedItem.Rating;
 
 
 
