@@ -30,12 +30,13 @@
         </StackLayout>
 
         <StackLayout Orientation="Horizontal" HeightRequest="80" VerticalOptions="End" HorizontalOptions="Center" Spacing="90" >
-
             <ImageButton Source="searchyellow.png"
                     BackgroundColor="White"
                     WidthRequest="40"
                     VerticalOptions="Center"
                     Clicked="Search_Clicked"/>
+
+
 
             <ImageButton Source="tvyellow.png"
                     BackgroundColor="White"

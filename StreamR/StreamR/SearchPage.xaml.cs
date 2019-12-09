@@ -15,14 +15,11 @@ namespace StreamR
         public SearchPage()
         {
             InitializeComponent();
+            
 
         }
 
-        private void Search_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new SearchPage());
-        }
-
+   
         private void Monitor_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MainPage());
@@ -32,10 +29,13 @@ namespace StreamR
         {
             Navigation.PushAsync(new ProfilePage());
         }
-
+        private void Search_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SearchPage());
+        }
         private void Search_Button(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MovieListPage());
+            Navigation.PushAsync(new MovieListPage("Juno"));
         }
     }
 }

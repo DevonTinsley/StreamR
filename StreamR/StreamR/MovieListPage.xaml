@@ -11,19 +11,26 @@
             <StackLayout BackgroundColor="Black">
                 <ScrollView>
                     <StackLayout>
+                        
                         <Label Text="Results" TextColor="White" FontSize="40" HorizontalTextAlignment="Center" Margin="0,30,0,0"/>
                         <ListView
                         x:Name="movieList"
-                        HasUnevenRows="True">
+                        HasUnevenRows="True"
+                            ItemSelected="movieList_ItemSelected"
+                           >
+                            
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                     <ViewCell>
                                         <StackLayout Margin="30">
-                                            <ImageButton
-                                                Clicked="ImageButton_Clicked"
+                                            <Image
+                                              
                                                 HeightRequest="150"
+                                                
                                                 HorizontalOptions="CenterAndExpand"
-                                                Source="{Binding ImageURL}"/>
+                                                Source="{Binding ImageURL}"
+                                                
+                                                />
                                             <Label                                                
                                                 FontSize="20"
                                                 FontAttributes="Bold"

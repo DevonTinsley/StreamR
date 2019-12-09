@@ -4,7 +4,7 @@ using System.Text;
 using System.Linq;
 namespace StreamR.Backend
 {
-    class MovieRepository
+    public class MovieRepository
     {
 
         List<Movie> movieRepo = new List<Movie>();
@@ -73,7 +73,8 @@ namespace StreamR.Backend
                     "Hulu",
                     "Amazon Prime"
                 },
-                ImageURL = "http://www.gstatic.com/tv/thumb/v22vodart/16443570/p16443570_v_v8_aa.jpg",
+               ImageURL = "https://images-na.ssl-images-amazon.com/images/I/81-%2BUBBOP4L._SL1500_.jpg",
+            
                 LengthInMinutes = 93
             };
             movieRepo.Add(KilledHitlerAndBigfoot);
@@ -94,7 +95,24 @@ namespace StreamR.Backend
                 LengthInMinutes = 93
             };
             movieRepo.Add(Juno);
-
+            var Equals = new Movie()
+            {
+                Title = "Equals",
+                Id = 5,
+                Categories = new List<string>() {
+                
+                    "Drama"
+                },
+                Synopsis = "I'll do this later",
+                StreamingPlatforms = new List<string>() {
+                    "Netflix",
+                    "Amazon Prime"
+                },
+                
+                 ImageURL = "https://ib1.hulu.com/user/v3/artwork/8a8294de-f49b-42a0-9672-d04a4516f465?base_image_bucket_name=image_manager&base_image=d97a8f87-7438-4038-bac9-0cf826656d16&size=400x600&format=jpeg",
+                LengthInMinutes = 93
+            };
+            movieRepo.Add(Juno);
 
         }
         //read
@@ -103,7 +121,7 @@ namespace StreamR.Backend
             var filteredMovies = moviesByCategory.Where(x => x.StreamingPlatforms.Any( y=> platforms.Contains(y))).ToArray();
             var results = new List<Movie>();
             var addedMovies = new List<int>();
-            for (int i = 0 ; i < 2 ; i++) {
+            for (int i = 0 ; i < 3 ; i++) {
 
                 var rand = new Random();
                 var index = rand.Next(filteredMovies.Length);
@@ -128,8 +146,8 @@ namespace StreamR.Backend
 
         //}
 
-        public Movie GetMovie(int id) {
-            return movieRepo.Where(x => x.Id == id).FirstOrDefault();
+        public Movie GetMovie(string title) {
+            return movieRepo.Where(x => x.Title == title).FirstOrDefault();
 
         }
 

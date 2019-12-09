@@ -21,6 +21,7 @@ namespace StreamR
     public partial class MovieListPage : ContentPage
     {
         private ObservableCollection<Movie> MoviesOnPage { get; set; }
+       
 
         public MovieListPage(List<string> category, List<string> platforms)
         {
@@ -30,24 +31,28 @@ namespace StreamR
 
             var MoviesOnPage = new ObservableCollection<Movie>();
 
-
             foreach (Movie movie in movies.OrderBy(x=>x.Title))
             {
                 MoviesOnPage.Add(movie);
             }
-
+            
             movieList.ItemsSource =  MoviesOnPage;
+            
+         
 
         }
-        public MovieListPage()
+        public MovieListPage(string name)
         {
             InitializeComponent();
-        }
-        private void ImageButton_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new MovieDetailsPage());
+            var movieRepo = new MovieRepository();
+            var movie = movieRepo.GetMovie(name);
+            var MoviesOnPage = new ObservableCollection<Movie>();
+            MoviesOnPage.Add(movie);
+            movieList.ItemsSource = MoviesOnPage;
+
 
         }
+
         private void Search_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new SearchPage());
@@ -63,6 +68,13 @@ namespace StreamR
             Navigation.PushAsync(new ProfilePage());
         }
 
-        
+        private void movieList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+          
+            Movie selectedMovie = e.SelectedItem as Movie;
+            
+            Navigation.PushAsync(new MovieDetailsPage(selectedMovie));
+
+        }
     }
 }

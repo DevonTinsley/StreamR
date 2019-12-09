@@ -46,15 +46,18 @@ namespace StreamR
 
         private void Search_For_Movie(object sender, EventArgs e)
         {
-            if(GenrePicker.SelectedItem.ToString() != null)
+            if (GenrePicker.SelectedItem == null || plat == null)
             {
-                genre = new List<string> { GenrePicker.SelectedItem.ToString() };
+                return;
             }
-
-            if (genre.ToString() != string.Empty && plat.ToString() != string.Empty){
-                Navigation.PushAsync(new MovieListPage(genre, plat));
+            else {
+                genre = new List<string>();
+                genre.Add(GenrePicker.SelectedItem.ToString());
+                Navigation.PushAsync(new MovieListPage(genre , plat));
 
             }
+            
+
           
 
         }
