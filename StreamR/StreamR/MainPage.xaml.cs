@@ -48,7 +48,7 @@ namespace StreamR
         {
             if (GenrePicker.SelectedIndex > -1)
             {
-                if (GenrePicker.SelectedItem == null || plat == null)
+                if (plat == null)
                 {
                     Navigation.PushAsync(new ProfilePage());
                 }
@@ -59,8 +59,6 @@ namespace StreamR
                     Navigation.PushAsync(new MovieListPage(genre, plat));
 
                 }
-
-
 
             }
             else {
